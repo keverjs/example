@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@kever/core": "^0.1.9",
-    "@kever/ioc": "^0.1.6",
+    "@kever/ioc": "^0.1.7",
     "@kever/logger": "^0.1.2",
     "@kever/router": "^0.1.1",
     "nodemon": "^2.0.4",
