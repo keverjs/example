@@ -24,21 +24,8 @@ export default class IndexController extends BaseController {
     params: 'Hello Before Route',
   })
   async test(ctx: Context, next: Next) {
-    console.log('test call')
     const name = await this.name
-    const data2 = await this.getData()
-    const data1 = await this.getData2()
     const data = await this.indexService.getData()
     ctx.body = data
-  }
-  async getData() {
-    return {
-      data: 'Hello world'
-    }
-  }
-  async getData2() {
-    return {
-      data: "hello world test"
-    }
   }
 }

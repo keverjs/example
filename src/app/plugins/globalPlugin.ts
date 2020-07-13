@@ -1,10 +1,15 @@
 import { BasePlugin, registerPlugin, PluginType } from '@kever/ioc'
 import { Context, Next } from '@kever/core'
 
+declare module '@kever/core' {
+  interface Context {
+    globalTxt: string
+  }
+}
 @registerPlugin('globalPlugin', PluginType.global)
 export class RoutePlugin implements BasePlugin {
   async ready(ctx: Context, next: Next) {
-    // console.log('这是全局的plugin')
-    next()
+    ctx.globalTxt = "这时全局的plugin"
+    await next()
   }
 }

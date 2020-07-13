@@ -9,10 +9,8 @@ declare module '@kever/core' {
 @registerPlugin('routerAfterPlugin', PluginType.route)
 export class RoutePlugin implements BasePlugin{
   constructor(...args) {
-    console.log('routerAfterParams', args)
   }
   async ready(raw: AsyncGeneratorFunction,ctx: Context, next: Next) {
-    console.log('after route')
     ctx.routerAfter = 'routerAfterParams'
   }
 }
