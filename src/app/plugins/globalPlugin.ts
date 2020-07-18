@@ -13,6 +13,7 @@ export class RoutePlugin implements BasePlugin {
   }
   async ready(ctx: Context, next: Next) {
     ctx.globalTxt = '这时全局的plugin'
+    console.log('这时全局的plugin')
     await next()
   }
 }
