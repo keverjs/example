@@ -23,6 +23,8 @@ export default class IndexController extends BaseController {
   })
   async index(ctx: Context, next: Next) {
     const name = await this.name
+    console.log('name')
+    console.log('index call')
     const data = await this.indexService.getData()
     ctx.body = data
   }

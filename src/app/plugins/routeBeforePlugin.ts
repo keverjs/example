@@ -8,9 +8,11 @@ declare module '@kever/core' {
 }
 @registerPlugin('routerBeforePlugin', PluginType.route)
 export class RoutePlugin implements BasePlugin {
-  constructor(...args) {
+  constructor(options) {
+    console.log('routerBefore', options)
   }
-  async ready(raw: AsyncGeneratorFunction,ctx: Context, next: Next) {
+  async ready(raw: AsyncGeneratorFunction, ctx: Context, next: Next) {
+    console.log('before call')
     ctx.routerBefore = 'routerBeforeParams'
   }
 }
