@@ -15,7 +15,7 @@
   "dependencies": {
     "@kever/ioc": "^0.1.12",
     "kever": "^0.6.0",
-    "ts-node": "^8.10.2",
+    "ts-node": "^9.1.0",
     "typescript": "^3.9.3"
   },
   "devDependencies": {
