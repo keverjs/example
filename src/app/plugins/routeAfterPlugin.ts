@@ -1,4 +1,4 @@
-import { BasePlugin, registerPlugin, PluginType } from '@kever/ioc'
+import { BasePlugin, RegisterPlugin, PluginType } from '@kever/ioc'
 import { Context, Next } from '@kever/core'
 
 declare module '@kever/core' {
@@ -6,7 +6,7 @@ declare module '@kever/core' {
     routerAfter: string
   }
 }
-@registerPlugin('routerAfterPlugin', PluginType.route)
+@RegisterPlugin('routerAfterPlugin', PluginType.router)
 export class RoutePlugin implements BasePlugin {
   constructor(options) {
     console.log('routerOptions', options)

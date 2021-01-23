@@ -1,11 +1,11 @@
-import { registerPlugin, PluginType, BasePlugin } from '@kever/ioc'
+import { RegisterPlugin, PluginType, BasePlugin } from '@kever/ioc'
 
-@registerPlugin('propertyPlugin', PluginType.property)
+@RegisterPlugin('propertyPlugin', PluginType.property)
 export class PropertyPlugin implements BasePlugin {
   constructor(options) {
     console.log('propertyOptions', options)
   }
-  async ready() {
+  ready() {
     return 'Hello world'
   }
 }

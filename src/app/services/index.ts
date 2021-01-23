@@ -3,9 +3,10 @@ import { TestService } from './test'
 
 @Injectable('index')
 export class IndexService {
+  public testSeervice: TestService
   async getData() {
     return {
-      data: 'Hello world',
+      data: 'hello world',
     }
   }
 }

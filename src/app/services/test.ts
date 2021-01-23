@@ -1,12 +1,13 @@
-import { Injectable, Inject, usePropertyPlugin } from '@kever/ioc'
+import { Injectable, Inject, PropertyPlugin } from '@kever/ioc'
 
 @Injectable('test')
 export class TestService {
-  @usePropertyPlugin('propertyPlugin')
-  private name:Promise<string>
+  @PropertyPlugin('propertyPlugin')
+  private name: string
   async getData() {
     
     console.log(this.name)
+    
     return {
       data: 'Hello test',
     }
