@@ -1,8 +1,8 @@
-import { Injectable, Inject, PropertyPlugin } from '@kever/ioc'
+import { Injectable, Inject, UsePlugin, PluginType } from '../../../../kever/packages/ioc'
 
 @Injectable('test')
 export class TestService {
-  @PropertyPlugin('propertyPlugin')
+  @UsePlugin(PluginType.property, 'propertyPlugin')
   private name: string
   async getData() {
     

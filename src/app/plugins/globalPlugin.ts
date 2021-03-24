@@ -1,4 +1,4 @@
-import { BasePlugin, RegisterPlugin, PluginType } from '@kever/ioc'
+import { BasePlugin, PluginType, Plugin } from '../../../../kever/packages/ioc'
 import { Context, Next } from '@kever/core'
 
 declare module '@kever/core' {
@@ -6,7 +6,7 @@ declare module '@kever/core' {
     globalTxt: string
   }
 }
-@RegisterPlugin('globalPlugin', PluginType.global)
+@Plugin('globalPlugin', PluginType.global)
 export class RoutePlugin implements BasePlugin {
   constructor(options) {
     console.log('golbal', options)

@@ -1,4 +1,4 @@
-import { BasePlugin, RegisterPlugin, PluginType } from '@kever/ioc'
+import { BasePlugin, PluginType, Plugin } from '../../../../kever/packages/ioc'
 import { Context, Next } from '@kever/core'
 
 declare module '@kever/core' {
@@ -6,7 +6,7 @@ declare module '@kever/core' {
     routerBefore: string
   }
 }
-@RegisterPlugin('routerBeforePlugin', PluginType.router)
+@Plugin('routerBeforePlugin', PluginType.router)
 export class RoutePlugin implements BasePlugin {
   constructor(options) {
     console.log('routerBefore', options)
@@ -14,5 +14,6 @@ export class RoutePlugin implements BasePlugin {
   async ready(raw: AsyncGeneratorFunction, ctx: Context, next: Next) {
     console.log('before call')
     ctx.routerBefore = 'routerBeforeParams'
+    return true
   }
 }

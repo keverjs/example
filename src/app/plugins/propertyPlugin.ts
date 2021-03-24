@@ -1,6 +1,6 @@
-import { RegisterPlugin, PluginType, BasePlugin } from '@kever/ioc'
+import { BasePlugin, PluginType, Plugin } from '../../../../kever/packages/ioc'
 
-@RegisterPlugin('propertyPlugin', PluginType.property)
+@Plugin('propertyPlugin', PluginType.property)
 export class PropertyPlugin implements BasePlugin {
   constructor(options) {
     console.log('propertyOptions', options)
