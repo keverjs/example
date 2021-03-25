@@ -1,4 +1,4 @@
-import { Injectable, Inject, UsePlugin, PluginType } from '../../../../kever/packages/ioc'
+import { Injectable, Inject, UsePlugin, PluginType } from '@kever/ioc'
 
 @Injectable('test')
 export class TestService {

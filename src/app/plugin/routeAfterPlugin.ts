@@ -1,4 +1,4 @@
-import { BasePlugin, PluginType, Plugin } from '../../../../kever/packages/ioc'
+import { BasePlugin, PluginType, Plugin } from '@kever/ioc'
 import { Context, Next } from '@kever/core'
 
 declare module '@kever/core' {

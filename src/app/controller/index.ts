@@ -1,7 +1,7 @@
 import { Controller, Context, Next } from '@kever/core'
 import { Inject } from '@kever/ioc'
 import { Get} from '@kever/router'
-import { IndexService } from '../services'
+import { IndexService } from '../service'
 
 @Controller('/index')
 export default class IndexController {
@@ -14,9 +14,10 @@ export default class IndexController {
       data: "Hello world"
     }
   }
-  @Get('/test')
+  @Get('/test/:id')
   async test(ctx: Context, next: Next) {
+    const query = ctx.params
     const data = await this.indexService.getData()
-    ctx.body = data
+    ctx.body = query
   }
 }
