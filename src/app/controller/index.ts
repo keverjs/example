@@ -17,7 +17,13 @@ export default class IndexController {
   @Get('/test/:id')
   async test(ctx: Context, next: Next) {
     const query = ctx.params
-    const data = await this.indexService.getData()
-    ctx.body = query
+    console.log(query)
+    let data
+    if (query.id === '1') {
+      data = await this.indexService.getData()
+    } else {
+      data = await this.indexService.getData2()
+    }
+    ctx.body = data
   }
 }
